@@ -10,17 +10,19 @@ Get desktop notifications when Claude Code requests tool execution permission or
 - 🎵 Different notification sounds (Ping for tool requests, Glass for completions)
 - 🍎 Native macOS integration
 
-## Installation
+## Getting Started
+
+### 1. Run the Tool
+
+No installation required! Use directly with npx:
 
 ```bash
-npm install -g claude-code-notify
+npx claude-code-notify
 ```
 
-## Setup
+This automatically downloads and runs the latest version from npm.
 
-### 1. Enable Notification Permissions
-
-Allow AppleScript to send notifications:
+### 2. Enable Notification Permissions
 
 1. Open **System Settings** → **Notifications**
 2. Find and select **Script Editor** from the list
@@ -28,23 +30,15 @@ Allow AppleScript to send notifications:
 4. Configure notification style (Banner or Alert)
 5. Test with: `osascript -e "display notification \"Test\" with title \"Test\""`
 
-### 2. Configure Claude Code Hook
+### 3. Configure Claude Code Hook
 
-Add the notification hook to your Claude Code settings file (`~/.claude/settings.json`).
-For more details, see: https://docs.anthropic.com/en/docs/claude-code/hooks
+1. In Claude Code, run the `/hooks` command
+2. Select **Notification** from the list
+3. Choose **Add new hook**
+4. Enter `npx claude-code-notify` as the command
+5. Save the configuration
 
-```json
-{
-  "hooks": {
-    "Notification": [
-      {
-        "type": "command",
-        "command": "claude-code-notify"
-      }
-    ]
-  }
-}
-```
+This setup ensures you always use the latest version without manual installation.
 
 ## Notification Types
 
