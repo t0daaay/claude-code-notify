@@ -4,7 +4,7 @@
   "description": "Desktop notifications for Claude Code",
   "author": "t0daaay",
   "bin": {
-    "claude-code-notify": "./claude-code-notify.sh"
+    "claude-code-notify": "claude-code-notify.sh"
   },
   "keywords": [
     "claude",
