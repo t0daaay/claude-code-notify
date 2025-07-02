@@ -40,6 +40,28 @@ This automatically downloads and runs the latest version from npm.
 
 This setup ensures you always use the latest version without manual installation.
 
+The resulting configuration in `~/.claude/settings.json` will look like:
+
+```json
+{
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx claude-code-notify"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+For more details about hooks, see: https://docs.anthropic.com/en/docs/claude-code/hooks
+
 ## Notification Types
 
 The script provides simple, clear notifications:
