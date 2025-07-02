@@ -12,16 +12,9 @@ Get desktop notifications when Claude Code requests tool execution permission or
 
 ## Installation
 
-### Via npm (recommended)
-
 ```bash
 npm install -g claude-code-notify
 ```
-
-### Manual Installation
-
-1. Clone or download the repository
-2. Add to your Claude Code hooks configuration
 
 ## Setup
 
@@ -46,22 +39,7 @@ For more details, see: https://docs.anthropic.com/en/docs/claude-code/hooks
     "Notification": [
       {
         "type": "command",
-        "command": "/usr/local/bin/claude-code-notify"
-      }
-    ]
-  }
-}
-```
-
-For manual installation, use the full path to your script:
-
-```json
-{
-  "hooks": {
-    "Notification": [
-      {
-        "type": "command",
-        "command": "/path/to/claude-code-notify.sh"
+        "command": "claude-code-notify"
       }
     ]
   }
